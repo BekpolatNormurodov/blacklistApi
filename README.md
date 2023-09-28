@@ -1,0 +1,2 @@
+# blacklistApi
+Gumonlanuvchilar malumotlari
