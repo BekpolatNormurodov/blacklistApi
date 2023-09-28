@@ -4,9 +4,11 @@ from rest_framework.decorators import api_view
 @api_view(['GET'])
 def getData(request):
     person = [
-        {'name':'Dennis', 'age':28},
-        {'name':'Jhon', 'age':20},
-        {'name':'Danna', 'age':23},
-        {'name':'Jhosa', 'age':25},
-    ]
+    {
+        "name": "Bekpolat Normurodov Ergash O'g'li",
+        "card":[
+            "8600 8790 6789 5482"
+        ]
+    }
+]
     return Response(person)
