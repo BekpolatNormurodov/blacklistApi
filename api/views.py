@@ -9,6 +9,12 @@ def getData(request):
         "card":[
             "8600 8790 6789 5482"
         ]
+    },
+    {
+        "name": "Bekpolat Normurodov Ergash O'g'li",
+        "card":[
+            "8600 8790 6789 5482"
+        ]
     }
 ]
     return Response(person)
