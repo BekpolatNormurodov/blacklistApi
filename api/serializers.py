@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Users, Phones, Cards
+from .models import Users, Phones, Cards, Friends
 
 class UsersSerializer(serializers.ModelSerializer):
     class Meta:
@@ -11,7 +11,12 @@ class PhonesSerializer(serializers.ModelSerializer):
         model = Phones
         fields = ('number', 'userId')
 
-class CardsSerializer(serializers.ModelSerializer):
+class CardsSerializer(serializers.ModelSerializer): 
     class Meta:
         model = Cards
         fields = ('bank', 'phone', 'number', 'date', 'fullname', 'userId')
+
+class FriendsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Friends
+        fields = ('name', 'userId')
