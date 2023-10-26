@@ -1,5 +1,5 @@
-from .models import Users, Phones
-from .serializers import UsersSerializer, PhonesSerializer
+from .models import Users, Phones,Cards
+from .serializers import UsersSerializer, PhonesSerializer, CardsSerializer
 from rest_framework.generics import ListAPIView, ListCreateAPIView, RetrieveUpdateDestroyAPIView
 
 # USERS
@@ -27,3 +27,16 @@ class PhonesCreate(ListCreateAPIView):
 class PhonesUpdate(RetrieveUpdateDestroyAPIView):
     queryset = Phones.objects.all()
     serializer_class = PhonesSerializer
+
+# CARDS
+class CardsView(ListAPIView):
+    queryset = Cards.objects.all()
+    serializer_class = CardsSerializer
+
+class CardsCreate(ListCreateAPIView):
+    queryset = Cards.objects.all()
+    serializer_class = CardsSerializer
+
+class CardsUpdate(RetrieveUpdateDestroyAPIView):
+    queryset = Cards.objects.all()
+    serializer_class = CardsSerializer
