@@ -15,15 +15,15 @@ class Users(models.Model):
         return self.name[:20]
 
 class Phones(models.Model):
-    number = models.IntegerField(null=True)
-    userId = models.ForeignKey(Users, on_delete=models.CASCADE, null=True)
+    number = models.CharField(max_length=100 ,null=True)
+    userId = models.ForeignKey(Users, on_delete=models.CASCADE, null=True)  
 
     def __str__(self):
         return self.number[:20]
     
 class Cards(models.Model):
     bank = models.CharField(max_length=100, null=True)
-    phone = models.IntegerField(null=True)
+    phone = models.CharField(max_length=100, null=True)
     number = models.CharField(max_length=100, null=True)
     date = models.CharField(max_length=100, null=True)
     fullname = models.CharField(max_length=100, null=True)
