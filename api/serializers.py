@@ -9,14 +9,14 @@ class UsersSerializer(serializers.ModelSerializer):
 class PhonesSerializer(serializers.ModelSerializer):
     class Meta:
         model = Phones
-        fields = ('number', 'userId')
+        fields = ('id', 'number', 'userId')
 
 class CardsSerializer(serializers.ModelSerializer): 
     class Meta:
         model = Cards
-        fields = ('bank', 'phone', 'number', 'date', 'fullname', 'userId')
+        fields = ('id', 'bank', 'phone', 'number', 'date', 'fullname', 'userId')
 
 class FriendsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Friends
-        fields = ('name', 'userId')
+        fields = ('id', 'name', 'userId')
