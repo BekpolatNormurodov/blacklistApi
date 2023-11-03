@@ -1,6 +1,19 @@
-from .models import Users, Phones,Cards, Friends
-from .serializers import UsersSerializer, PhonesSerializer, CardsSerializer, FriendsSerializer
+from .models import SearchUsers, Users, Phones,Cards, Friends
+from .serializers import SearchUsersSerializer, UsersSerializer, PhonesSerializer, CardsSerializer, FriendsSerializer
 from rest_framework.generics import ListAPIView, ListCreateAPIView, RetrieveUpdateDestroyAPIView
+
+# SEARCHUSERS
+class SearchUsersView(ListAPIView):
+    queryset = SearchUsers.objects.all()
+    serializer_class = SearchUsersSerializer
+
+class SearchUsersCreate(ListCreateAPIView):
+    queryset = SearchUsers.objects.all()
+    serializer_class = SearchUsersSerializer
+
+class SearchUsersUpdate(RetrieveUpdateDestroyAPIView):
+    queryset = SearchUsers.objects.all()
+    serializer_class = SearchUsersSerializer
 
 # USERS
 class UsersView(ListAPIView):

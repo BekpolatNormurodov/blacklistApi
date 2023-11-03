@@ -1,5 +1,11 @@
 from django.db import models
 
+class SearchUsers(models.Model):
+    username = models.CharField(max_length=100, null=True)
+
+    def __str__(self):
+        return self.username[:20]
+
 class Users(models.Model):
     name = models.CharField(max_length=100, null=True)
     surname = models.CharField(max_length=100, null=True)
@@ -10,13 +16,14 @@ class Users(models.Model):
     about = models.TextField(max_length=10000, null=True)
     passportNumber= models.CharField(max_length=100, null=True)
     idNumber = models.CharField(max_length=100, null=True)
+    userId = models.ForeignKey(SearchUsers, on_delete=models.CASCADE, null=True)  
 
     def __str__(self):
         return self.name[:20]
 
 class Phones(models.Model):
     number = models.CharField(max_length=100 ,null=True)
-    userId = models.ForeignKey(Users, on_delete=models.CASCADE, null=True)  
+    userId = models.ForeignKey(SearchUsers, on_delete=models.CASCADE, null=True)  
 
     def __str__(self):
         return self.number[:20]
@@ -27,14 +34,14 @@ class Cards(models.Model):
     number = models.CharField(max_length=100, null=True)
     date = models.CharField(max_length=100, null=True)
     fullname = models.CharField(max_length=100, null=True)
-    userId = models.ForeignKey(Users, on_delete=models.CASCADE, null=True)
+    userId = models.ForeignKey(SearchUsers, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return self.number[:20]
     
 class Friends(models.Model):
     name = models.CharField(max_length=100, null=True)
-    userId = models.ForeignKey(Users, on_delete=models.CASCADE, null=True)
+    userId = models.ForeignKey(SearchUsers, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return self.name[:20]

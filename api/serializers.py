@@ -1,5 +1,10 @@
 from rest_framework import serializers
-from .models import Users, Phones, Cards, Friends
+from .models import SearchUsers, Users, Phones, Cards, Friends
+
+class SearchUsersSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SearchUsers
+        fields = ('id', 'username')
 
 class UsersSerializer(serializers.ModelSerializer):
     class Meta:
