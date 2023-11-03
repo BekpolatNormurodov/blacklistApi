@@ -1,13 +1,8 @@
 from django.urls import path
-from .views import SearchUsersView,SearchUsersCreate, SearchUsersUpdate, UsersView, UsersCreate, UsersUpdate, PhonesView, PhonesCreate, PhonesUpdate, CardsView, CardsCreate, CardsUpdate, FriendsView, FriendsCreate, FriendsUpdate
+from .views import UsersView, UsersCreate, UsersUpdate, PhonesView, PhonesCreate, PhonesUpdate, CardsView, CardsCreate, CardsUpdate, FriendsView, FriendsCreate, FriendsUpdate
 
 urlpatterns = [
-    # SearchUsers
-    path('searchusers/',SearchUsersView.as_view()),
-    path('searchusers/post/',SearchUsersCreate.as_view()),
-    path('searchusers/<int:pk>',SearchUsersUpdate.as_view()),
-
-     # Users
+    # Users
     path('users/',UsersView.as_view()),
     path('users/post/',UsersCreate.as_view()),
     path('users/<int:pk>',UsersUpdate.as_view()),
