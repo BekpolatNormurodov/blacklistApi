@@ -34,6 +34,7 @@ class Cards(models.Model):
     
 class Friends(models.Model):
     name = models.CharField(max_length=100, null=True)
+    friendId = models.IntegerField(null=True)
     userId = models.ForeignKey(Users, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
