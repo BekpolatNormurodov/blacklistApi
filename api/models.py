@@ -1,6 +1,7 @@
 from django.db import models
 
 class Users(models.Model):
+    image = models.ImageField(upload_to='images/', null=True)
     name = models.CharField(max_length=100, null=True)
     surname = models.CharField(max_length=100, null=True)
     fatherName = models.CharField(max_length=100, null=True)
