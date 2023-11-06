@@ -4,7 +4,7 @@ from .models import Users, Phones, Cards, Friends
 class UsersSerializer(serializers.ModelSerializer):
     class Meta:
         model = Users
-        fields = ('id', 'image', 'name', 'surname', 'fatherName', 'birthday', 'isCourt', 'isCar', 'about', 'passportNumber', 'idNumber')
+        fields = ('id', 'name', 'surname', 'fatherName', 'birthday', 'isCourt', 'isCar', 'about', 'passportNumber', 'idNumber')
 
 class PhonesSerializer(serializers.ModelSerializer):
     class Meta:
