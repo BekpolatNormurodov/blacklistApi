@@ -39,4 +39,4 @@ class Friends(models.Model):
     userId = models.ForeignKey(Users, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
-        return self.name[:20]
+        return self.fullname[:20]
