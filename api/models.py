@@ -40,3 +40,10 @@ class Friends(models.Model):
 
     def __str__(self):
         return self.fullname[:20]
+    
+class Workers(models.Model):
+    username = models.CharField(max_length=100, null=True)
+    admin = models.BooleanField(null=True)
+
+    def __str__(self):
+        return self.username[:20]
