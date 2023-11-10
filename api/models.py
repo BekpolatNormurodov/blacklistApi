@@ -11,6 +11,7 @@ class Users(models.Model):
     about = models.TextField(max_length=10000, null=True)
     passportNumber= models.CharField(max_length=100, null=True)
     idNumber = models.CharField(max_length=100, null=True)
+    username = models.CharField(max_length=100, null=True)
 
     def __str__(self):
         return self.name[:20]
