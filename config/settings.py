@@ -101,7 +101,6 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 STATICFILES_DIRS=[str(BASE_DIR) + "/assets",]
