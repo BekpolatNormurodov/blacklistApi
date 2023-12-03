@@ -108,8 +108,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/images/')
 STATICFILES_DIRS=[str(BASE_DIR) + "/assets",]
+MEDIA_ROOT = '(здесь вы прописываете путь своего файла /home/hopakau1/django.hopaka.uz/django/)media' 
+STATIC_ROOT ='(здесь вы прописываете путь своего файла /home/hopakau1/django.hopaka.uz/django/)static'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
