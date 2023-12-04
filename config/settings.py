@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -104,5 +105,10 @@ USE_TZ = True
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Images
-STATIC_URL = 'static/'
-STATICFILES_DIRS=[str(BASE_DIR)]
+# STATIC_URL = 'static/'
+# STATICFILES_DIRS=[str(BASE_DIR)]
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'files/static')
+MEDIA_URL = '/files/uploads/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'files/uploads')
