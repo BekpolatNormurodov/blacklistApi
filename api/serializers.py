@@ -7,7 +7,7 @@ class UsersSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Users
-        fields = ('id', 'image', 'name', 'surname', 'fatherName', 'birthday', 'isCourt', 'isCar', 'about', 'passportNumber', 'idNumber', 'username')
+        fields = ('id', 'image', 'profile_img', 'name', 'surname', 'fatherName', 'birthday', 'isCourt', 'isCar', 'about', 'passportNumber', 'idNumber', 'username')
 
     def get_profile_img(self, obj):
         # Assuming 'image' is a FileField or ImageField in your model
