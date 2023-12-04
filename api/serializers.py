@@ -3,20 +3,19 @@ from .models import Users, Phones, Cards, Friends, Workers
 from django.conf import settings
 
 class UsersSerializer(serializers.ModelSerializer):
-    profile_img = serializers.SerializerMethodField()
+    image = serializers.SerializerMethodField()
 
     class Meta:
         model = Users
-        fields = ('id', 'image', 'profile_img', 'name', 'surname', 'fatherName', 'birthday', 'isCourt', 'isCar', 'about', 'passportNumber', 'idNumber', 'username')
+        fields = ('id', 'image', 'name', 'surname', 'fatherName', 'birthday', 'isCourt', 'isCar', 'about', 'passportNumber', 'idNumber', 'username')
 
-    def get_profile_img(self, obj):
-        # Assuming 'image' is a FileField or ImageField in your model
+    def get_image(self, obj):
         if obj.image:
-            # Modify the image URL by appending the desired text
             image_url = f"{settings.MEDIA_URL}{obj.image}"
-            modified_url = f"{settings.BASE_URL}/blacklistApi/{image_url}"
+            modified_url = f"{settings.BASE_URL}/blacklistApi{image_url}"
             return modified_url
         return None
+
 
 
 class PhonesSerializer(serializers.ModelSerializer):
