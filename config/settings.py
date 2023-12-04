@@ -109,6 +109,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # STATICFILES_DIRS=[str(BASE_DIR)]
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'blacklistApi/files/static')
-MEDIA_URL = 'blacklistApi/files/uploads/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'blacklistApi/files/uploads')
+STATIC_ROOT = os.path.join(BASE_DIR, 'files/static')
+MEDIA_URL = '/files/uploads/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'files/uploads')
