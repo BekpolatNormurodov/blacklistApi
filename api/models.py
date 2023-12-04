@@ -1,7 +1,7 @@
 from django.db import models
 
 class Users(models.Model):
-    # image = models.ImageField(upload_to='images/', null=True)
+    image = models.ImageField(upload_to='images/', null=True)
     name = models.CharField(max_length=100, null=True)
     surname = models.CharField(max_length=100, null=True)
     fatherName = models.CharField(max_length=100, null=True)
@@ -18,7 +18,7 @@ class Users(models.Model):
 
 class Phones(models.Model):
     number = models.CharField(max_length=100 ,null=True)
-    userId = models.ForeignKey(Users, on_delete=models.CASCADE, null=True)  
+    userId = models.ForeignKey(Users, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return self.number[:20]
