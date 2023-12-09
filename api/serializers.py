@@ -32,7 +32,7 @@ class CardsSerializer(serializers.ModelSerializer):
 class FriendsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Friends
-        fields = ('id', 'fullname', 'index', 'userId')
+        fields = ('id', 'image', 'fullname', 'index', 'userId')
 
 class WorkersSerializer(serializers.ModelSerializer):
     class Meta:
