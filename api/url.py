@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import UsersView, UsersCreate, UsersUpdate, PhonesView, PhonesCreate, PhonesUpdate, CardsView, CardsCreate, CardsUpdate, FriendsView, FriendsCreate, FriendsUpdate, WorkersView, WorkersCreate, WorkersUpdate
+from .views import *
 
 urlpatterns = [
     # Users
@@ -26,4 +26,7 @@ urlpatterns = [
     path('workers/',WorkersView.as_view()),
     path('workers/post/',WorkersCreate.as_view()),
     path('workers/<int:pk>',WorkersUpdate.as_view()),
+
+    #Search
+    path('search/',SearchApiView.as_view()),
 ]

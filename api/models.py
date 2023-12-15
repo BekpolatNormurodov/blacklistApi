@@ -30,7 +30,7 @@ class Cards(models.Model):
     date = models.CharField(max_length=100, null=True)
     fullname = models.CharField(max_length=100, null=True)
     userId = models.ForeignKey(Users, on_delete=models.CASCADE, null=True)
-
+    
     def __str__(self):
         return self.number[:20]
     

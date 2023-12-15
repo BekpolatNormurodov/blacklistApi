@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Users, Phones, Cards, Friends, Workers
+from .models import *
 from django.conf import settings
 
 class UsersSerializer(serializers.ModelSerializer):

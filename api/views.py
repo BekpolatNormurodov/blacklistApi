@@ -1,6 +1,8 @@
-from .models import Users, Phones,Cards, Friends, Workers
-from .serializers import UsersSerializer, PhonesSerializer, CardsSerializer, FriendsSerializer, WorkersSerializer
-from rest_framework.generics import ListAPIView, ListCreateAPIView, RetrieveUpdateDestroyAPIView
+from rest_framework.response import Response
+from .models import *
+from .serializers import  *
+from rest_framework.generics import *
+from rest_framework.views import APIView
 
 # USERS
 class UsersView(ListAPIView):
@@ -68,3 +70,21 @@ class WorkersCreate(ListCreateAPIView):
 class WorkersUpdate(RetrieveUpdateDestroyAPIView):
     queryset = Workers.objects.all()
     serializer_class = WorkersSerializer
+
+
+
+
+class SearchApiView(APIView):
+    serializer_class = UsersSerializer
+    serializer_class = PhonesSerializer
+    serializer_class = CardsSerializer
+    def get(self, request):
+        users = Users.objects.all().values()
+        phones = Phones.objects.all().values()
+        cards = Cards.objects.all().values()
+        data = [
+           users,
+           cards,
+           phones
+        ]
+        return Response(data)
