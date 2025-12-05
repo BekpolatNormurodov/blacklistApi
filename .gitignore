@@ -1,2 +1,67 @@
-./db.sqlite3
-./images
+# =========================
+# Python / Django loyihasi
+# =========================
+
+# Python caching
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+env/
+.venv/
+venv/
+ENV/
+
+# Django migration cache (pyc)
+*/migrations/__pycache__/
+
+# SQLite bazalar (agar gitga qo'shmoqchi bo'lmasang)
+*.sqlite3
+db.sqlite3
+
+# Media / static (agar serverda generatsiya bo'lsa)
+media/
+staticfiles/
+static/
+
+# Log fayllar
+*.log
+logs/
+log/
+
+# IDE / Editor papkalari
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS fayllari
+.DS_Store
+Thumbs.db
+
+# Env fayllar (parol, kalitlar)
+.env
+*.env
+
+# Coverage / testlar
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+
+# MyPy, Pylint va hokazo
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+
+# Build / dist (agar paket qilsang)
+build/
+dist/
+*.egg-info/
+*.egg
