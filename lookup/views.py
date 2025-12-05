@@ -19,10 +19,10 @@ from lookup.serializers import TelegramUserSerializer
 
 
 # ===============================
-# ⚙️ TELEGRAM API MA'LUMOTLARI
+# ⚙️ TELEGRAM API MA'LUMOTLARI +998 (88) 977-39-80
 # ===============================
-api_id = 28404288
-api_hash = "d560c74564f1be204bdbf892b7c392bc"
+api_id = 32888646
+api_hash = "9afc05e84e57e29b689837e2a36f59cf"
 
 # ⚠️ Session stringlarni OLDINDAN, alohida skript bilan generatsiya qilib qo'yasiz.
 # Bu yerda faqat tayyor stringlardan foydalanamiz.
