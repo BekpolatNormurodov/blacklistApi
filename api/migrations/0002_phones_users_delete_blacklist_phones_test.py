@@ -28,7 +28,7 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.DeleteModel(
-            name='BlackList',
+            name='blacklist',
         ),
         migrations.AddField(
             model_name='phones',

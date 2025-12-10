@@ -32,7 +32,7 @@ api_hash = "9afc05e84e57e29b689837e2a36f59cf"
 #     print(client.session.save())
 
 session_strings = [
-    "1ApWapzMBu071X1k6zLjwlFNJy7XALpjzEyoSLZqieNcUbXyCnmtTDQ2Uj2TtfnNOpDCUQ2kzqg3_3JoUY9lHsC5gFDZM1O8a8nLaXvbAWrRehNuShMAVUwc3BKCQY5Y30CVqvqCnWxgxVFsj77ynC2g8XC54h1oBT4oEbB7CVs5KXPGJyxVtnPADZ5LMmlNBFtY2KFNyEKfvnrdOYIWHLDiIY9rNHdapphHsSP-Q7S_ON-wS2laRSOjmZZFngDKdtwY6eu0H9r8WskvddQwtIrZycfWxbiugToJy2l3j6w_Gj7IhY9NcYKRJupsk0KweRer44xEJvjEHiE8HsuNWNCzKoSXiGD0=",
+    "1ApWapzMBu30qIfGdLuBZJt1h5fdcWuJ2eyY_fr2SKhPhfZ72c9tPBq2jtEE_KqXPij4WDMDoLpjkPl72ZYQANTs4BoK8GWA1fynb_2aeqt9QEeNnkgpmi6A8Liajs2nVSgKo2wPJPMf_-c4u7R6AlWxq7Mb1oGrfLr4IrWnAOYIxHkQII1G_nThDKmXfArXbEw28CesJRvw6A6S7leO45br5_a0k04iqZBqod4pnXocHsUF4-QnR-QIY20wRWuHgvqsT1rxIj-E-ZNQ-yHNRYIK_2bglwQm8katCoz5wLSwAb7BD8u2x_kXVyHJEYM6Zwhn0ihAeRpPZbqRyi23g_n9aCGKZzDc=",
     # Kerak bo'lsa yana qo'shish mumkin
 ]
 
@@ -70,7 +70,7 @@ def generate_default_phones() -> list[str]:
     998991240501 dan 998991241500 gacha bo'lgan raqamlar.
     """
     start = 998994411101
-    end = 998994411103
+    end = 998994411150
     return [str(num) for num in range(start, end + 1)]
 
 
